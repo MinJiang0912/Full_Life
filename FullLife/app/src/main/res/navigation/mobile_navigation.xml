@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.fulllife.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_completedtasks"
+            app:destination="@id/navigation_completedtasks" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.fulllife.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_home2"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_edit"
+            app:destination="@id/navigation_edit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_edit"
+        android:name="com.example.fulllife.ui.edit.EditFragment"
+        android:label="Edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_navigation_edit_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_navigation_edit_to_voiceFragment2"
+            app:destination="@id/voiceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.fulllife.ui.settings.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_login"
+            app:destination="@id/navigation_login" />
+        <action
+            android:id="@+id/action_navigation_settings_to_navigation_settings_profile"
+            app:destination="@id/navigation_settings_profile" />
+        <action
+            android:id="@+id/action_navigation_edit_to_voiceFragment"
+            app:destination="@id/voiceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/voiceFragment"
+        android:name="com.example.fulllife.ui.VoiceFragment"
+        android:label="fragment_voice"
+        tools:layout="@layout/fragment_voice" >
+        <action
+            android:id="@+id/action_voiceFragment_to_navigation_edit"
+            app:destination="@id/navigation_edit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.fulllife.ui.login.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_userlist"
+            app:destination="@id/navigation_userlist" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_userlist"
+        android:name="com.example.fulllife.ui.userlist.UserListFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_userlist" >
+        <action
+            android:id="@+id/action_navigation_userlist_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings_profile"
+        android:name="com.example.fulllife.ui.settings.profile.ProfileFragment"
+        android:label="Settings Profile"
+        tools:layout="@layout/fragment_settings_profile" >
+        <action
+            android:id="@+id/action_navigation_settings_profile_to_navigation_settings_profile_caretaker_edit"
+            app:destination="@id/navigation_settings_profile_caretaker_edit" />
+        <action
+            android:id="@+id/action_navigation_settings_profile_to_navigation_settings_profile_patient_edit"
+            app:destination="@id/navigation_settings_profile_patient_edit" />
+        <action
+            android:id="@+id/action_navigation_settings_profile_to_navigation_settings"
+            app:destination="@id/navigation_settings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings_profile_caretaker_edit"
+        android:name="com.example.fulllife.ui.settings.profile.caretaker.ProfileCaretakerFragment"
+        android:label="Settings Profile Caretaker"
+        tools:layout="@layout/fragment_settings_profile_caretaker_edit" >
+        <action
+            android:id="@+id/action_navigation_settings_profile_caretaker_edit_to_navigation_settings_profile"
+            app:destination="@id/navigation_settings_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings_profile_patient_edit"
+        android:name="com.example.fulllife.ui.settings.profile.patient.ProfilePatientFragment"
+        android:label="Settings Profile patient"
+        tools:layout="@layout/fragment_settings_profile_patient_edit" >
+        <action
+            android:id="@+id/action_navigation_settings_profile_patient_edit_to_navigation_settings_profile"
+            app:destination="@id/navigation_settings_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_completedtasks"
+        android:name="com.example.fulllife.ui.completedTasks.CompletedTasksFragment"
+        android:label="Completed"
+        tools:layout="@layout/fragment_completedtask" >
+        <action
+            android:id="@+id/action_navigation_completedtasks_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_completedtasks_to_navigation_completedtasksgraph"
+            app:destination="@id/navigation_completedtasksgraph" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_completedtasksgraph"
+        android:name="com.example.fulllife.ui.completedTasks.graph.CompletedTasksGraphFragment"
+        android:label="CompletedGraph"
+        tools:layout="@layout/fragment_completedgraph" >
+        <action
+            android:id="@+id/action_navigation_completedtasksgraph_to_navigation_completedtasks"
+            app:destination="@id/navigation_completedtasks" />
+    </fragment>
+
+</navigation>

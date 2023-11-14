@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tasks"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFBEA"
+    tools:context=".ui.home.HomeFragment">
+
+    <Button
+        android:id="@+id/patientButton"
+        android:layout_width="330dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#7366bd"
+        android:text="Patient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginHint" />
+
+    <Button
+        android:id="@+id/caretakerButton"
+        android:layout_width="328dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="45dp"
+        android:backgroundTint="#7366bd"
+        android:text="Caretaker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientButton" />
+
+    <Button
+        android:id="@+id/debuggerButton"
+        android:layout_width="334dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
+        android:backgroundTint="#7366bd"
+        android:text="Debugger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caretakerButton" />
+
+    <TextView
+        android:id="@+id/AppTitle"
+        android:layout_width="332dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="41dp"
+        android:text="Welcome to Full Life"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/LoginHint"
+        android:layout_width="334dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="33dp"
+        android:text="What would you like to use the appllication as?"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

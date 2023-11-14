@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tasks"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFBEA"
+    tools:context=".ui.home.HomeFragment">
+
+    <Button
+        android:id="@+id/AnnePatientButton"
+        android:layout_width="330dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="41dp"
+        android:backgroundTint="#7366bd"
+        android:text="Anne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginHint" />
+
+    <Button
+        android:id="@+id/caretakerButton"
+        android:layout_width="326dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="45dp"
+        android:backgroundTint="#7366bd"
+        android:text="Placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AnnePatientButton" />
+
+    <Button
+        android:id="@+id/placeholder2"
+        android:layout_width="326dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="45dp"
+        android:backgroundTint="#7366bd"
+        android:text="Placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caretakerButton" />
+
+    <TextView
+        android:id="@+id/LoginHint"
+        android:layout_width="328dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="45dp"
+        android:text="Select Patient"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

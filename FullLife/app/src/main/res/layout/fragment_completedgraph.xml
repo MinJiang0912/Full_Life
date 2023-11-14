@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="back" />
+
+    <TextView
+        android:id="@+id/tasksCompletedGraphTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Last 5 Days Tasks Completed Totals"
+        android:textSize="24sp" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/completedTasksBarchart"
+        android:layout_width="match_parent"
+        android:layout_height="590dp"
+        android:layout_below="@+id/tasksCompletedGraphTitle"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>
